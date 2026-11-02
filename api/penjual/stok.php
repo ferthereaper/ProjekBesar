@@ -14,7 +14,7 @@ $buka = $lapak['status_toko'] === 'buka';
 ?>
 <section class="page-heading">
     <div>
-        <h1>Manajemen Menu</h1>
+        <h1><?= e($lapak['nama_lapak']) ?></h1>
         <p>Kelola produk, harga, dan ketersediaan menu <?= e($lapak['nama_lapak']) ?>.</p>
     </div>
     <span class="badge <?= $buka ? 'badge-success' : 'badge-danger' ?>"><?= $buka ? 'Lapak Buka' : 'Lapak Tutup' ?></span>
