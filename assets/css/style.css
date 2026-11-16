@@ -1448,8 +1448,8 @@ main > .hero { flex: 1; padding-bottom: 72px; }
    Harus di paling bawah file
 ======================================== */
 
-/* HP & tablet kecil (≤ 800px): 3 kolom, kartu ringkas */
-@media (max-width: 800px) {
+/* HP & tablet kecil (≤ 899px): 3 kolom, kartu ringkas */
+@media (max-width: 899px) {
     .stall-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 
     .stall-card {
