@@ -1398,3 +1398,13 @@ td .cart-name { display: block; font-weight: 600; color: var(--cream); }
 main:has(> .hero) { display: flex; flex-direction: column; }
 main > .hero { flex: 1; padding-bottom: 72px; }
 .copy p { margin: 2px 0; }
+
+/* logo di halaman login */
+.auth-logo {
+    display: block;
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    object-fit: cover;
+}

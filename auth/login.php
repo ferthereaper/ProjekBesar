@@ -10,8 +10,7 @@ $mode = 'auth';
 include __DIR__ . '/../includes/header.php';
 ?>
 <section class="auth-card">
-    <!-- <div class="auth-icon" aria-hidden="true"></div> -->
-    <img src="<?= e(url('assets/img/logo_bsf.jpeg')) ?>" alt="Logo BSF" class="auth-logo">
+    <img src="<?= e(url('images/logo_bsf.jpeg')) ?>" alt="Logo BSF" class="auth-logo">
 
     <h1>Selamat Datang!</h1>
     <p class="auth-description">
