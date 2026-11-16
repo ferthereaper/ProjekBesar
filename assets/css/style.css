@@ -681,7 +681,7 @@ input[type="checkbox"], input[type="radio"] { width: auto; accent-color: var(--g
 .notice .ic { flex-shrink: 0; margin-top: 0.2em; color: var(--gold); }
 
 /* ---------- Tabel ---------- */
-.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.table-wrap { position: relative; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-sm); }
 table { width: 100%; min-width: 640px; border-collapse: collapse; }
 
 th {
@@ -998,7 +998,7 @@ footer.copy { border-top: 1px solid var(--line); }
 ======================================== */
 
 @media (max-width: 1000px) {
-    .split { grid-template-columns: 1fr; }
+    .split { grid-template-columns: minmax(0, 1fr); }
     .sticky { position: static; }
     .auth-information { grid-template-columns: 1fr; max-width: 460px; }
 }
@@ -1311,7 +1311,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .stepper { display: inline-flex; align-items: center; gap: 6px; }
 
 .stepper button {
-    display: grid;
+    display: grid;  
     place-items: center;
     width: 38px;
     height: 38px;
@@ -1398,3 +1398,36 @@ td .cart-name { display: block; font-weight: 600; color: var(--cream); }
 main:has(> .hero) { display: flex; flex-direction: column; }
 main > .hero { flex: 1; padding-bottom: 72px; }
 .copy p { margin: 2px 0; }
+
+
+/* ========================================
+   15. HP KECIL (≤ 480px)
+   Harus di paling bawah supaya menimpa aturan di atasnya
+======================================== */
+@media (max-width: 480px) {
+    /* Navbar beranda */
+    .nav-link { padding: 8px 12px; font-size: 14px; }
+    .brand-text small { display: none; }
+
+    /* Judul & hero */
+    .page-heading h1 { font-size: 1.5rem; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-description { font-size: 1rem; }
+    .hero-buttons .btn { min-width: 0; width: 100%; }
+
+    /* Panel, form, toolbar */
+    .panel { padding: 16px; }
+    .toolbar select { width: 100%; min-width: 0; }
+    .search-box { flex-basis: 100%; }
+    .form-actions > * { flex: 1 1 100%; }
+
+    /* Menu, pesanan, keranjang */
+    .order-actions form { flex-basis: 100%; }
+    .cart-actions { flex-wrap: wrap; }
+    .stat-card h3 { font-size: 1.6rem; }
+
+    /* Login & pembayaran */
+    .auth-card { padding: 24px 16px; }
+    .qris-card { padding: 22px 16px; }
+    .qris-code { width: min(240px, 100%); height: auto; aspect-ratio: 1; }
+}
