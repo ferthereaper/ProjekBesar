@@ -1431,3 +1431,13 @@ main > .hero { flex: 1; padding-bottom: 72px; }
     .qris-card { padding: 22px 16px; }
     .qris-code { width: min(240px, 100%); height: auto; aspect-ratio: 1; }
 }
+
+/* logo di halaman login */
+.auth-logo {
+    display: block;
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 16px;
+    border-radius: 20px;
+    object-fit: cover;
+}
